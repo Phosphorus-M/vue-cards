@@ -2,7 +2,7 @@
 <sui-container text-align="center" >
     <sui-segment style="margin-top: 20px; margin-bottom: 50px;">
 	    <sui-container text-align="center" >
-            <Header :buttons="buttons" text="tes" />
+            <Header :buttons="buttons" :text="JSON.parse(contact.isFavorite)" />
             <sui-divider hidden clearing />
             <sui-image :src="contact.largeImageURL" size="medium" rounded  centered />
             <sui-header size="large">{{contact.companyName}}</sui-header>

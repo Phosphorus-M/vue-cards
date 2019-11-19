@@ -1,7 +1,7 @@
 <template>
 <sui-container text-align="center" >
 
-    <sui-segment style="margin-top: 20px;">
+    <sui-segment style="margin-top: 20px;  margin-bottom: 50px">
 	    <sui-container text-align="center" >
             <Header style="padding-top: 50px !important" />
             <ListOfContacts header="Favoritos" :contacts="favoritos" />
@@ -22,7 +22,6 @@ import Contacto from './contact-logic';
 
 let favoritos = [];
 let noFavoritos = [];
-var datos = [];
 
 
 export default {
@@ -40,6 +39,8 @@ export default {
         }
  },
  mounted () {
+     favoritos= [];
+    noFavoritos = [];
     axios
       .get('https://s3.amazonaws.com/technical-challenge/v3/contacts.json')
       .then(response => {
